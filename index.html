@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Calculator</title>
+
+</head>
+
+    <!--<link rel="stylesheet" href="./P_files/style.css">-->
+
+      <script src="./P_files/jquery.js"></script>
+	  <script src="./P_files/jquery.introLoader.pack.min.js"></script>
+	  <script src="./P_files/app.js"></script>
+
+<script src="script/bootstrap.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/calc.css">
+
+<script>
+    function showframe()
+    {
+        document.getElementById("frameOfMenu").style.display = "block";
+    }
+    function hideframe()
+    {
+        document.getElementById("frameOfMenu").style.display = "none";
+    }
+</script>
+
+<body>
+
+<!-- Top navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div style="color: #FFFFFF;" class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li style="display: inline-block" class="active">&emsp; &emsp; &emsp; &emsp; <img width="50" height="50" src="img/logo.png"> &emsp;</li>
+                <li style="display: inline-block" class="active"><a href="#">Home</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div id="marginAboveContent">
+</div>
+
+
+<!-- Container -->
+<div class="container" id="calcContent">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="panel panel-primary">
+                <div style="font-size: 15px" class="panel-heading">Calculate what you want <span style="font-size: 24px">&#9786;</span></div>
+                <div class="panel-body">
+                    <div><textarea disabled class="form-control" style="resize: none;" rows="1" id="calculateArea"></textarea></div>
+                    <br>
+                    <div><table style="padding: 10px" align="center" id="calc">
+                        <tr>
+                            <td><button type="button" class="btn">x!</button></td>
+                            <td><button type="button" class="btn">&#8678</button></td>
+                            <td><button type="button" class="btn">Abs</button></td>
+                            <td><button type="button" class="btn">^</button></td>
+                            <td><button type="button" class="btn">AC</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">sin</button></td>
+                            <td><button type="button" class="btn">cos</button></td>
+                            <td><button type="button" class="btn">tan</button></td>
+                            <td><button type="button" class="btn">ln</button></td>
+                            <td><button type="button" class="btn">log</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">π</button></td>
+                            <td><button type="button" class="btn">Mod</button></td>
+                            <td><button type="button" class="btn">x<sup>3</sup></button></td>
+                            <td><button type="button" class="btn">(</button></td>
+                            <td><button type="button" class="btn">)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">%</button></td>
+                            <td><button type="button" class="btn">&#8730</button></td>
+                            <td><button type="button" class="btn">x²</button></td>
+                            <td><button type="button" class="btn">1/x</button></td>
+                            <td rowspan="5"><button id="eqlbtn" type="button" class="btn">=</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">7</button></td>
+                            <td><button type="button" class="btn">8</button></td>
+                            <td><button type="button" class="btn">9</button></td>
+                            <td><button type="button" class="btn">÷</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">4</button></td>
+                            <td><button type="button" class="btn">5</button></td>
+                            <td><button type="button" class="btn">6</button></td>
+                            <td><button type="button" class="btn">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">1</button></td>
+                            <td><button type="button" class="btn">2</button></td>
+                            <td><button type="button" class="btn">3</button></td>
+                            <td><button type="button" class="btn">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="btn">±</button></td>
+                            <td><button type="button" class="btn">0</button></td>
+                            <td><button type="button" class="btn">.</button></td>
+                            <td><button type="button" class="btn">+</button></td>
+                        </tr>
+                    </table></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+
+<!-- Side navigation -->
+<div onmouseover="showframe()" onmouseout="hideframe()" class="sidenav">
+    <div class="sidenav2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="Shortcuts">
+        <b><p style="text-align: center; font-size: 28px;">Shortcuts</p></b>
+        <p>
+            Absolute : Shift + A <br>
+            Change Sign : Shift + N <br>
+            Inverse : Shift + I <br>
+            Square Root : Shift + R <br>
+            PI : Shift + P <br>
+            Factorial : Shift + 1 <br>
+            Percentage : Shift + 5 <br>
+            ( : Shift + 9 <br>
+            ) : Shift + 0 <br>
+            Power : Shift + 6 <br>
+            Multiply : Shift + 8 <br>
+            Add : Shift + = <br>
+            Divide : / <br>
+            Subtract : - <br>
+            Square : P <br>
+            Cube : C <br>
+            Dot : . <br>
+            Numbers : From 1 to 0 <br>
+            Backspace : ⇦ or left arrow<br>
+            Equal : = or Enter <br>
+            Erase : Esc <br>
+        </p>
+    </div>
+</div>
+
+<div id="frameOfMenu">
+</div>
+
+
+    <!-- BACKGROUND ELEMENT -->
+    <span class="image-bg-wrap aos-init aos-animate" data-aos="fade" data-aos-delay="0">
+        <div class="-bg-image -opacity-70"></div>
+    </span>
+
+    <!-- LOADING ELEMENT -->
+    <div id="site-loading" class="-black introLoader doubleLoader theme-light" style="display: none;">
+	<div class="doubleLoaderTop" style="height: 0px;"></div>
+	<div class="doubleLoaderBottom" style="height: 0px;"></div>
+	<div class="doubleLoaderProgBar" style="display: none;"><span style="width: 100%;"></span></div>
+	</div>
+
+
+</body>
+</html>
+
+<script>
+$(document).ready(function(){
+$.getScript("script/calc.js");
+});
+</script>
+<script>
+$(document).ready(function(){
+$.getScript("script/frame.js");
+});
+</script>
